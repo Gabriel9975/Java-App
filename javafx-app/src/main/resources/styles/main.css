@@ -1,0 +1,11 @@
+.root {
+    -fx-background-image: url('/images/acer.jpg'); /* Chemin de l'image */
+    -fx-background-size: cover; /* Ajuste l'image pour couvrir tout l'espace */
+    -fx-background-position: center; /* Centre l'image */
+    -fx-background-repeat: no-repeat; /* Empêche la répétition de l'image */
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333; /* Couleur du texte */
+}
