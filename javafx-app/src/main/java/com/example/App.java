@@ -1,22 +1,21 @@
 package com.example;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 public class App extends Application {
 
     @Override
-    public void start(Stage primaryStage) {
-        // Créer un label
-        Label label = new Label("Bonjour, JavaFX !");
+    public void start(Stage primaryStage) throws Exception {
+        // Charger l'interface FXML
+        VBox root = FXMLLoader.load(getClass().getResource("/layouts/app.fxml"));
 
-        // Créer une scène avec le label
-        Scene scene = new Scene(label, 300, 200);
-
-        // Configurer la fenêtre principale
-        primaryStage.setTitle("Ma Première Application JavaFX");
+        // Créer la scène et afficher la fenêtre
+        Scene scene = new Scene(root, 300, 200);
+        primaryStage.setTitle("Interface FXML");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -24,9 +23,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-}Label label = new Label("Bonjour, JavaFX !");
-Scene scene = new Scene(label, 300, 250);
-primaryStage.setTitle("Ma Première Application JavaFX");
-primaryStage.setScene(scene);
-primaryStage.setResizable(false);
-primaryStage.show();
+}
