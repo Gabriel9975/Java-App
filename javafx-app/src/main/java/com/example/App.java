@@ -24,4 +24,9 @@ public class App extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-}
+}Label label = new Label("Bonjour, JavaFX !");
+Scene scene = new Scene(label, 300, 250);
+primaryStage.setTitle("Ma Première Application JavaFX");
+primaryStage.setScene(scene);
+primaryStage.setResizable(false);
+primaryStage.show();
